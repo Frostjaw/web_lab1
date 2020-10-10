@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "PassUsingViewData";
+}
+
+<h2>PassUsingViewData</h2>
+<p>Rand Value First: @ViewData["firstNumber"]</p>
+<p>Rand Value Second: @ViewData["secondNumber"]</p>
+<p>Add: @ViewData["sum"]</p>
+<p>Sub: @ViewData["sub"]</p>
+<p>Mult: @ViewData["mult"]</p>
+@if (ViewData.ContainsKey("div"))
+{
+    <p>Div: @ViewData["div"]</p>
+}
+else
+{
+    <p>Div: Деление на 0</p>
+}
+

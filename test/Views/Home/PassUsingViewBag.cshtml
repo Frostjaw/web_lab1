@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "PassUsingViewBag - Backend1";
+}
+
+<h2>PassUsingViewBag</h2>
+<p>Rand Value First: @ViewBag.firstNumber</p>
+<p>Rand Value Second: @ViewBag.secondNumber</p>
+<p>Add: @ViewBag.sum</p>
+<p>Sub: @ViewBag.sub</p>
+<p>Mult: @ViewBag.mult</p>
+@if (ViewBag.div != null)
+{
+    <p>Div: @ViewBag.div</p>
+}
+else
+{
+    <p>Div: Деление на 0</p>
+}

@@ -1,0 +1,20 @@
+﻿@inject CalcService calcService
+@{
+    ViewData["Title"] = "AccessServiceDirectly - Backend1";
+}
+
+<h2>AccessServiceDirectly</h2>
+<p>Rand Value First: @calcService.getFirstNumber()</p>
+<p>Rand Value Second: @calcService.getSecondNumber()</p>
+<p>Add: @calcService.getSum()</p>
+<p>Sub: @calcService.getSub()</p>
+<p>Mult: @calcService.getMult()</p>
+@if (Double.IsNaN(calcService.getDiv()))
+{
+    <p>Div: Деление на 0</p>
+}
+else
+{
+    <p>Div: @calcService.getDiv()</p>
+}
+
